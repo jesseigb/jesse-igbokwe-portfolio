@@ -651,3 +651,11 @@ body {
         }
     }
 }
+
+@media (hover:none) {
+    .nav-bar-wrapper div {
+        &:hover {
+            background: #191919;
+        }
+    }
+}
