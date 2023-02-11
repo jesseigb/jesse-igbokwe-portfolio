@@ -57,12 +57,6 @@ function FullWork() {
             <Row className='window-content full'>
                 <Row className="window-header">
                     <Col className="window-action-wrapper" style={{paddingLeft: '30px'}} xs={4}>
-                        <div className="close">
-                            <img src={closeIcon} draggable="false"></img>
-                        </div>
-                        <div className="minimise">
-                            <img src={minimiseIcon} draggable="false"></img>
-                        </div>
                         <div onClick={() => goToPage('')} className="shrink">
                             <img src={shrinkIcon} draggable="false"></img>
                         </div>
