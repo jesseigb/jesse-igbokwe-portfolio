@@ -4,8 +4,6 @@ import {Container, Row, Col} from 'react-bootstrap';
 import closeIcon from '../assets/img/close-icon.svg';
 import minimiseIcon from '../assets/img/minimise-icon.svg';
 import shrinkIcon from '../assets/img/shrink-icon.svg';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import "animate.css/animate.min.css";
 import Journey from './JourneyText';
 
 function FullAbout() {
