@@ -648,6 +648,12 @@ body {
     .skills-logo-wrapper {
         width: 100%;
     }
+
+    .title-content {
+        > h1 {
+            font-size: 2.5em !important;
+        }
+    }
 }
 
 @media (hover:none) {
