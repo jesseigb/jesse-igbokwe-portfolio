@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+
+* {
+    font-family: 'DM Serif Display', serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, img, span {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #191919 !important;
+    color: white !important;
+    overflow-y: overlay;
+}
+
+.desktop-wrapper {
+    position: absolute;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);;
+    height: 95.2vh;
+    margin-top: 20px;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 1px;
+    overflow-x: hidden;
+} 
+
+//Generate a random value for window positioning
+@function random_range($min, $max) {
+    $rand: random();
+    $random_range: $min + floor($rand * (($max - $min) + 1));
+    @return $random_range;
+}
+
+.desktop-wrapper div.window{
+    position: absolute;
+    
+}
+
+.contact {
+    left: #{random_range(50, 750)}px;
+    top: #{random_range(50, 300)}px;
+}
+
+.about {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.work {
+    left: #{random_range(100, 750)}px;
+    top: #{random_range(50, 300)}px;
+}
+
+.nav-bar-wrapper div{
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+    background: #191919;
+    float: right;
+
+    width: 160px;
+    height: auto;
+    color: white;
+    border: 1px solid white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s;
+}
+
+.nav-bar-wrapper div:hover {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    width: 170px;
+}
+
+.navbar-active {
+    background: white !important;
+    color: #191919 !important;
+}
+
+.window {
+    width: 700px !important;
+    height: 400px !important;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: white;
+    box-shadow: -5px 5px 15px #191919;
+    border: 0.5px solid white;
+}
+
+#active-window {
+    animation: show-animation 0.1s ease-in 0s forwards;
+    display: block;
+}
+
+@keyframes show-animation {
+    0% {opacity: 0.5;}
+    99% {opacity: 1;}
+    100% {display: block;}
+}
+
+#hidden-window {
+    display: none;
+}
+
+.window-header {
+    align-items: center;
+    background: #191919;
+    color: white;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: move;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
+.window-header div {
+    display: inline-block;
+}
+
+.window-header div:nth-child(2) p {
+    margin-left: 25%;
+    margin-bottom: 0px;
+}
+
+.close {
+    margin-right: 7px;
+    background: #FF5D58;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.minimise {
+    margin-right: 7px;
+    background: #FFBC30;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.expand {
+    margin-right: 7px;
+    background: #19C734;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.shrink {
+    margin-right: 7px;
+    background: #19C734;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.window-action-wrapper div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.window-action-wrapper div img {
+    width: 10px;
+    height: auto;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.window-action-wrapper div img:hover {
+    opacity: 1;
+}
+
+.window-content {
+    color: #191919;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    overflow-y: hidden;
+
+    &.full {
+        height: 96vh;
+        position: relative;
+
+        > div.work-container {
+            height: auto;
+            position: relative;
+            padding: 0px;
+            
+
+            .work-content-container {
+                height: auto;
+                width: 100%;
+                padding-left: 10%;
+
+                .bubble-title {
+                    bottom: 20px;
+                }
+
+                > img {
+                    height: auto;
+                    width: 80%;
+                    margin-bottom: 30px;
+                    transition: all 0.2s;
+
+                    &.demo {
+                        position: relative;
+                        transform: scale(1.1);    
+                    }
+                }
+
+                
+                > p {
+                    margin-top: 20px;
+                    width: 70%;
+                    font-size: 20px;
+                }
+            }
+            
+            div.line {
+                position: absolute;
+                bottom: 20px;
+                width: 100%;
+                height: 2px;
+                opacity: 0.5;
+                
+                &.dark {
+                    background: #191919;
+                }
+
+                &.white {
+                    background: white;
+                }
+
+            }
+        }
+
+        &.dark {
+            background: #191919;
+            color: rgb(244, 244, 244);
+            height: 100vh;
+        }
+    }
+
+    &.work-minimised {
+        height: 87.7%;
+        position: relative;
+        margin-top: 50px;
+        
+        > div.work-div {
+            height: 99.5%;
+            padding: 0px !important;
+            position: relative;
+
+            > div.content-wrapper {
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 85%;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 20px;
+                background: linear-gradient(to top, rgb(255, 255, 255) 0%,rgb(255, 255, 255) 22%,rgb(255, 255, 255) 70%,rgba(255,255,255,0) 100%);
+
+                &.dark {
+                    background: linear-gradient(to top, rgb(12,12,12) 0%,rgb(12,12,12) 22%,rgb(12,12,12) 70%,rgba(255,255,255,0) 100%);
+                }
+
+                div {
+                    margin-bottom: 10px;
+                }
+
+                .skills-logo-wrapper img {
+                    width: 30px;
+                    height: auto;
+                }
+            }
+
+
+            .line {
+                height: 2px;
+                width: 100%;
+                background: #191919;
+                opacity: 0.7;
+            }
+
+            .work-description-div {
+                width: 60%;
+                height: auto;
+
+                &.light {
+                    color: white;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .control-container {
+            position: absolute;
+            width: 98%;
+            height: auto;
+            bottom: 8px;
+            text-align: center;
+
+                &.light span {
+                    color: white;
+                }
+
+                img {
+                    width: 20px;
+                    height: auto;
+                    cursor: pointer;
+                }
+
+                img:active {
+                    transform: scale(1.2);
+                }
+
+            }
+    }
+    
+}
+
+.bubble-title {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 100px;
+    border: 1px solid #191919;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    background: white;
+    display: inline-block;
+    width: auto;
+    transition: all 0.2s;
+
+    &.light {
+        background: #191919;
+        color: white;
+        border: 1px solid white;
+    }
+
+    &.light:hover {
+        background: white;
+        color: #191919;
+        border: 1px solid white;
+    }
+
+    a {
+        text-decoration: none;
+        color: #191919;
+    }
+
+    p{
+        margin-bottom: 0px;
+        font-weight: bold;
+        margin: 0px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: #191919;
+        color: white;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.skills-logo-wrapper {
+    width: 80%;
+    
+    img, svg {
+        width: 40px;
+        height: auto;
+        opacity: 0.5;
+        transition: 0.2s;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+}
+
+
+.title-content {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes mouse-animation {
+    0% {position: relative; top: -10px;}
+    90% {position: relative; top: 1px;}
+    100% {opacity: 0;}
+}
+
+@keyframes slide-in-animation { 
+    0% { position: relative; right: 10px ;opacity: 0.0; } 
+    100% {position: relative; right: 0px;  opacity: 1;}
+}
+
+@keyframes open-explore-menu-animation { 
+    0% { position: relative; bottom: 0px ;opacity: 0.0; } 
+    100% {position: relative; bottom: -10px;  opacity: 1;}
+}
+
+@keyframes close-explore-menu-animation { 
+    0% { position: relative; top: 10px ;opacity: 1; } 
+    100% {position: relative; top: 0px;  opacity: 0;}
+}
+
+.work-menu-buttons {
+    opacity: 0;
+}
+
+.open-menu {
+    animation: open-explore-menu-animation 0.3s ease-in-out 0s forwards;
+}
+
+.close-menu {
+    animation: close-explore-menu-animation 0.3s ease-in-out 0s forwards;
+}
+
+.slide-in-animation {
+    animation: slide-in-animation 0.2s ease-in-out 0s forwards;
+}
+
+.mouse-container {
+    width: 90%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+
+    .mouse {
+        border: 3px solid #191919;
+        height: 50px;
+        width: 30px;
+        border-radius: 100px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30%;
+        
+
+        .mouse-dot {
+            height: 13px;
+            width: 4px;
+            background: #191919;
+            border-radius: 100px;
+            animation: mouse-animation 1s ease-in-out 0s infinite;
+        }
+
+
+    }
+
+}
+
+.journey-container {
+
+    position: relative;
+    height: auto;
+
+    .skills-logo-wrapper img {
+        filter: drop-shadow(0 0 4mm white);
+        margin-top: 20px;
+        margin-right: 40px;
+    }
+
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+.full-window {
+    width: 100vw !important;
+    background: white;
+    padding: 0 !important;
+    color: #191919;
+}
+
+.introduction-container {
+    text-align: center;
+
+    padding-left: 10%;
+    padding-right: 10%;
+
+    p {
+        font-size: 1.5em;
+    }
+}
+
+.timeline-bar-container {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+}
+
+.timeline-bar {
+    background: rgb(244, 244, 244);
+    width: 100%;
+    height: 3px;
+    position: relative;
+    top: 28%;
+
+    div {
+        cursor: pointer;
+        transition: 0.2s;
+        background: rgb(244, 244, 244);
+        border: 3.5px solid #191919;
+
+        &:hover {
+            border: 1px solid rgb(244, 244, 244);
+        }
+        
+        &:active {
+            background: #191919;
+            border: 3.5px solid rgb(244, 244, 244);
+        }
+    }
+
+    p#first-text {
+        position: absolute;
+        left: 15%;
+        top: 50%;
+        transform: translateY(50%);
+    }
+
+    p#second-text {
+        position: absolute;
+        left: 36%;
+        top: 50%;
+        transform: translateY(50%);
+    }
+
+    p#third-text {
+        position: absolute;
+        left: 57%;
+        top: 50%;
+        transform: translateY(50%);
+    }
+
+    p#fourth-text {
+        position: absolute;
+        left: 78%;
+        top: 50%;
+        transform: translateY(50%);
+    }
+}
+
+.timeline-first-point {
+    position: absolute;
+    left: 18%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.timeline-second-point {
+    position: absolute;
+    left: 38%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.timeline-third-point {
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.timeline-fourth-point {
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+//Get rid of timeline timepoints text to avoid overlaps [Work Page]
+@media only screen and (max-width: 650px) {
+    .timeline-bar {
+        p {
+            display: none;
+        }
+    }
+}
+
+//Make navigation bar responsive [App]
+@media only screen and (max-width: 700px) {   
+    .nav-bar-wrapper div{
+        width: 32.7%;
+        margin: 0px;
+        margin-right: 5px;
+    }
+}
