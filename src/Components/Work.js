@@ -95,7 +95,7 @@ function Work(props) {
                     <Col id='1' className='work-div' xs={12} style={{display: 'block', backgroundImage: `url(${g6Picture})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                         <div className='content-wrapper light'>
                             <div className='bubble-title'>
-                                <p>G6 Surgery - Appointment Managment System Project</p>
+                                <p>Appointment Management Project</p>
                             </div>
                             <div className="skills-logo-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />

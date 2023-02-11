@@ -67,7 +67,7 @@ function FullWork() {
                 </Row>
                 <Col style={{paddingTop: '60px'}} className='work-container' lg={6} xs={12}>
                     <div className='work-content-container'>
-                        <div className='bubble-title'><p>Appointment Managment Project</p></div>
+                        <div className='bubble-title'><p>Appointment Management Project</p></div>
                         <div className="skills-logo-wrapper">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
