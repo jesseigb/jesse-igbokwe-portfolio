@@ -35,7 +35,7 @@ function About(props) {
                 </Row>
                 <Row className="window-content work-minimised">
                     <Col xs={12}>
-                        <h1>Hello World,<br></br>I am Jesse Igbokwe</h1>
+                        <h1>Hello World,<br></br>I'm Jesse Igbokwe</h1>
                         <p style={{fontSize: '1.1em', width: '80%'}}> As a <span style={{fontWeight: 'bold'}}>Web Developer</span> graduate I enjoy to catapult ideas into the web through coding.
                             <br></br>During my University course and Software Engineering Bootcamp experience I have worked with:
                         </p>
