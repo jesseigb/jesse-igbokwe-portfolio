@@ -645,5 +645,9 @@ body {
         width: 32.5%;
         margin: 0px;
         margin-right: 1%;
+
+        &:hover {
+            width: 160px;
+        }
     }
 }
