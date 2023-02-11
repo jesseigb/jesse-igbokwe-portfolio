@@ -33,7 +33,7 @@ function FullAbout() {
         <Container className='full-window' fluid>
             <Row className='window-content full'>
                 <Row className="window-header">
-                    <Col className="window-action-wrapper" style={{paddingLeft: '30px'}} xs={3}>
+                    <Col className="window-action-wrapper" style={{paddingLeft: '15px'}} xs={3}>
                         <div onClick={() => goToPage('')} className="shrink">
                             <img src={shrinkIcon} draggable="false"></img>
                         </div>
