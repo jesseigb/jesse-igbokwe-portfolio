@@ -1,8 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
-import closeIcon from '../assets/img/close-icon.svg';
-import minimiseIcon from '../assets/img/minimise-icon.svg';
+import leftArrow from '../assets/img/left-arrow.png';
 import shrinkIcon from '../assets/img/shrink-icon.svg';
 import g6Picture from '../assets/img/g6picture.jpeg';
 import boxingPredictionPicture from '../assets/img/boxing-prediction-picture.png';
@@ -55,16 +54,10 @@ function FullWork() {
         <Container className='full-window' fluid>
 
             <Row className='window-content full'>
-                <Row className="window-header">
-                    <Col className="window-action-wrapper" style={{paddingLeft: '15px'}} xs={3}>
-                        <div onClick={() => goToPage('')} className="shrink">
-                            <img src={shrinkIcon} draggable="false"></img>
-                        </div>
-                    </Col>
-                    <Col xs={7}>
-                        <p>Work</p>
-                    </Col>
-                </Row>
+                <div style={{cursor: 'default'}} className="window-header">
+                    <img onClick={() => goToPage('')} src={leftArrow} draggable="false"></img>
+                    <p>Work</p>
+                </div>
                 <Col style={{paddingTop: '60px'}} className='work-container' lg={6} xs={12}>
                     <div className='work-content-container'>
                         <div className='bubble-title'><p>Appointment Management Project</p></div>

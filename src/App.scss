@@ -133,6 +133,22 @@ body {
     top: 0px;
     z-index: 1;
     width: 100%;
+    display: grid;
+    justify-self: center;
+    align-items: center;
+
+    img {
+        width: 30px;
+        height: auto;
+        position: absolute;
+        left: 30px;
+        cursor: pointer;
+    }
+
+    p {
+        margin: 0 auto;
+    }
+
 }
 
 .window-header div {
