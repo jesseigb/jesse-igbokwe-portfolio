@@ -230,11 +230,13 @@ body {
                     }
                 }
 
-                
-                > p {
-                    margin-top: 20px;
-                    width: 70%;
-                    font-size: 20px;
+                .work-text-container {
+
+                    p {
+                        margin-top: 20px;
+                        width: 70%;
+                        font-size: 20px;
+                    }
                 }
             }
             
@@ -636,10 +638,18 @@ body {
     }
 
     .work-content-container {
-        > p {
-            width: 90% !important;
-            font-size: 1.1em !important;
+
+        .work-text-container {
+
+            height: 20em;
+            overflow: scroll;
+
+            p {
+                width: 90% !important;
+                font-size: 1.1em !important;
+            }
         }
+
         .bubble-title {
             margin-right: 15%;
             margin-top: 20px;
