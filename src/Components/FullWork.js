@@ -56,7 +56,7 @@ function FullWork() {
 
             <Row className='window-content full'>
                 <Row className="window-header">
-                    <Col className="window-action-wrapper" style={{paddingLeft: '30px'}} xs={4}>
+                    <Col className="window-action-wrapper" style={{paddingLeft: '15px'}} xs={4}>
                         <div onClick={() => goToPage('')} className="shrink">
                             <img src={shrinkIcon} draggable="false"></img>
                         </div>
