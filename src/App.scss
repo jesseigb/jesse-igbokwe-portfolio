@@ -643,6 +643,7 @@ body {
 
             height: clamp(15em, 3vw, 10em);
             overflow: scroll;
+            box-shadow: inset -3px -6px 20px lightgray;
 
             p {
                 width: 90% !important;
