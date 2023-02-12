@@ -1,10 +1,8 @@
 import {useState, React} from 'react';
 import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
-import closeIcon from '../assets/img/close-icon.svg';
-import minimiseIcon from '../assets/img/minimise-icon.svg';
-import shrinkIcon from '../assets/img/shrink-icon.svg';
 import Journey from './JourneyText';
+import leftArrow from '../assets/img/left-arrow.png';
 
 function FullAbout() {
 
@@ -33,20 +31,14 @@ function FullAbout() {
         <Container className='full-window' fluid>
             <Row className='window-content full'>
                 <Row className="window-header">
-                    <Col className="window-action-wrapper" style={{paddingLeft: '15px'}} xs={3}>
-                        <div onClick={() => goToPage('')} className="shrink">
-                            <img src={shrinkIcon} draggable="false"></img>
-                        </div>
-                    </Col>
-                    <Col xs={7}>
-                        <p>About Me</p>
-                    </Col>
+                    <img onClick={() => goToPage('')} src={leftArrow} draggable="false"></img>
+                    <p>About</p>
                 </Row>
-                    <Col className='title-content' lg={6} xs={8}>
-                        <p style={{marginBottom: '0', fontSize: '1em'}}>Hello World, I am</p>
-                        <h1 style={{fontSize: '4em'}}>Jesse Igbokwe</h1>
-                        <p style={{fontSize: '1.5em'}}>Full Stack Web Developer</p>
-                        <div className="skills-logo-wrapper">
+                <Col className='title-content' lg={6} xs={8}>
+                    <p style={{marginBottom: '0', fontSize: '1em'}}>Hello World, I am</p>
+                    <h1 style={{fontSize: '4em'}}>Jesse Igbokwe</h1>
+                    <p style={{fontSize: '1.5em'}}>Full Stack Web Developer</p>
+                    <div className="skills-logo-wrapper">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
@@ -60,14 +52,14 @@ function FullAbout() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"/>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"/>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"/>
+                    </div>
+                    <div className='mouse-container'>
+                        <div className='mouse'>
+                            <div className='mouse-dot'></div>
                         </div>
-                        <div className='mouse-container'>
-                            <div className='mouse'>
-                                <div className='mouse-dot'></div>
-                            </div>
-                            <p style={{marginTop: '10px'}}>Scroll Down</p>
-                        </div>
-                    </Col>
+                        <p style={{marginTop: '10px'}}>Scroll Down</p>
+                    </div>
+                </Col>
             </Row>
             <Row className='window-content full dark'>
                 <Col className='journey-container' lg={6} md={8} xs={8}>

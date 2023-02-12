@@ -1,8 +1,6 @@
 import React from 'react';
 import Draggable from 'react-draggable';
 import {Container, Row, Col} from 'react-bootstrap';
-import closeIcon from '../assets/img/close-icon.svg';
-import minimiseIcon from '../assets/img/minimise-icon.svg'
 
 function Contact(props) {
 
@@ -10,17 +8,7 @@ function Contact(props) {
         <Draggable handle='.window-header' bounds='parent'>
             <Container className="window box contact" id={props.active ? "active-window" : "hidden-window"}>
                 <Row className="window-header">
-                    <Col className="window-action-wrapper" xs={3}>
-                        <div className="close">
-                            <img src={closeIcon} draggable="false"></img>
-                        </div>
-                        <div className="minimise">
-                            <img src={minimiseIcon} draggable="false"></img>
-                        </div>
-                    </Col>
-                    <Col xs={9}>
-                        <p>Contact Me</p>
-                    </Col>
+                    <p>Contact</p>
                 </Row>
                 <Row className="window-content work-minimised">
                     <Col className='h-100' xs={12}>

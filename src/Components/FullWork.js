@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import leftArrow from '../assets/img/left-arrow.png';
-import shrinkIcon from '../assets/img/shrink-icon.svg';
 import g6Picture from '../assets/img/g6picture.jpeg';
 import boxingPredictionPicture from '../assets/img/boxing-prediction-picture.png';
 import bookProjectPicture from '../assets/img/book-project-picture.png';
@@ -54,10 +53,10 @@ function FullWork() {
         <Container className='full-window' fluid>
 
             <Row className='window-content full'>
-                <div style={{cursor: 'default'}} className="window-header">
+                <Row style={{cursor: 'default'}} className="window-header">
                     <img onClick={() => goToPage('')} src={leftArrow} draggable="false"></img>
                     <p>Work</p>
-                </div>
+                </Row>
                 <Col style={{paddingTop: '60px'}} className='work-container' lg={6} xs={12}>
                     <div className='work-content-container'>
                         <div className='bubble-title'><p>Appointment Management Project</p></div>

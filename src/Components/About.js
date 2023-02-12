@@ -1,10 +1,8 @@
 import React from 'react';
 import Draggable from 'react-draggable';
 import {Container, Row, Col} from 'react-bootstrap';
-import closeIcon from '../assets/img/close-icon.svg';
 import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
-import minimiseIcon from '../assets/img/minimise-icon.svg'
-import expandIcon from '../assets/img/expand-icon.svg'
+import expandIcon from '../assets/img/expand.png';
 
 function About(props) {
 
@@ -18,20 +16,8 @@ function About(props) {
         <Draggable handle='.window-header' bounds='parent'>
             <Container className="window box about" id={props.active ? "active-window" : "hidden-window"}>
                 <Row className="window-header">
-                    <Col className="window-action-wrapper" xs={3}>
-                        <div className="close">
-                            <img src={closeIcon} draggable="false"></img>
-                        </div>
-                        <div className="minimise">
-                            <img src={minimiseIcon} draggable="false"></img>
-                        </div>
-                        <div onClick={() => goToPage('about')} className="expand">
-                            <img src={expandIcon} draggable="false"></img>
-                        </div>
-                    </Col>
-                    <Col xs={9}>
-                        <p>About Me</p>
-                    </Col>
+                    <img className='expand' onClick={() => goToPage('about')} src={expandIcon} draggable="false"></img>
+                    <p>About</p>
                 </Row>
                 <Row className="window-content work-minimised">
                     <Col xs={12}>
