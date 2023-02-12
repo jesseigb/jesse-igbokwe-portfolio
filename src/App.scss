@@ -641,7 +641,7 @@ body {
 
         .work-text-container {
 
-            height: 20em;
+            height: clamp(320px, 3vw, 10em);
             overflow: scroll;
 
             p {
