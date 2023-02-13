@@ -16,7 +16,7 @@ function About(props) {
         <Draggable handle='.window-header' bounds='parent'>
             <Container className="window box about" id={props.active ? "active-window" : "hidden-window"}>
                 <Row className="window-header">
-                    <img className='expand' onClick={() => goToPage('about')} src={expandIcon} draggable="false"></img>
+                    <img onClick={() => goToPage('about')} onTouchEnd={() => goToPage('about')} className='expand' src={expandIcon} draggable="false"></img>
                     <p>About</p>
                 </Row>
                 <Row className="window-content work-minimised">

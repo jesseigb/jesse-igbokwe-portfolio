@@ -74,7 +74,7 @@ function Work(props) {
         <Draggable handle='.window-header' bounds='parent'>
             <Container className="window box work" id={props.active ? "active-window" : "hidden-window"}>
                 <Row className="window-header">
-                    <img className='expand' onClick={() => goToPage('work')} src={expandIcon} draggable="false"></img>
+                    <img className='expand' onClick={() => goToPage('work')} onTouchEnd={() => goToPage('work')} src={expandIcon} draggable="false"></img>
                     <p>Work</p>
                 </Row>
                 <Row className="window-content work-minimised">
