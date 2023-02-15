@@ -4,7 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import leftArrow from '../assets/img/left-arrow.png';
 import g6Picture from '../assets/img/g6picture.webp';
 import boxingPredictionPicture from '../assets/img/boxing-prediction-picture.webp';
-import bookProjectPicture from '../assets/img/book-project-picture.wep';
+import bookProjectPicture from '../assets/img/book-project-picture.webp';
 
 function FullWork() {
 
