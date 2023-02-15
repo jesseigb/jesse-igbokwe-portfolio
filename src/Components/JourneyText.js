@@ -61,6 +61,10 @@ function JourneyText(props) {
             else if(skill == 'github') {
                 skillsArray.push('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg');
             }
+            
+            else if(skill == 'bootstrap') {
+                skillsArray.push('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg');
+            }
         })};
 
     return (

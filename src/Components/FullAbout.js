@@ -98,7 +98,7 @@ function FullAbout() {
                                 title: 'Skills City', 
                                 subTitle: 'Software Engineering Bootcamp Experience', 
                                 description: "Thanks to this experience I was able to further expand knowledge on web development tools like React. Additionally, during this bootcamp I was placed in a team with a client where I was resposible for the development of a booking managment web-based system for a private surgery; I got this done by adopting key web technologies like Python-based framework Django and Github.",
-                                skills: ['html', 'css', 'javascript', 'react', 'python', 'django-white', 'github']})} 
+                                skills: ['html', 'css', 'javascript', 'react', 'python', 'django-white', 'github', 'bootstrap']})} 
                                 className='timeline-fourth-point'></div>
                         </div>
                     </div>
