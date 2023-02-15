@@ -3,8 +3,8 @@ import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-
 import {Container, Row, Col} from 'react-bootstrap';
 import leftArrow from '../assets/img/left-arrow.png';
 import g6Picture from '../assets/img/g6picture.jpeg';
-import boxingPredictionPicture from '../assets/img/boxing-prediction-picture.png';
-import bookProjectPicture from '../assets/img/book-project-picture.png';
+import boxingPredictionPicture from '../assets/img/boxing-prediction-picture.jpg';
+import bookProjectPicture from '../assets/img/book-project-picture.jpg';
 
 function FullWork() {
 
