@@ -246,7 +246,7 @@ body {
                     margin-bottom: 10px;
                 }
 
-                .skills-logo-wrapper img {
+                .skills-logo-wrapper img,i {
                     width: 30px;
                     height: auto;
                 }
@@ -350,7 +350,7 @@ body {
 .skills-logo-wrapper {
     width: 80%;
     
-    img, svg {
+    img, svg{
         width: 40px;
         height: auto;
         opacity: 0.5;
@@ -427,6 +427,9 @@ body {
         filter: drop-shadow(0 0 4mm white);
         margin-top: 20px;
         margin-right: 40px;
+    }
+    [aria-django="true"] {
+        filter: invert(100%) hue-rotate(142deg) brightness(104%) contrast(104%) !important;
     }
 
 }
@@ -654,7 +657,7 @@ body {
             font-size: 1em !important;
         }
 
-        .skills-logo-wrapper img {
+        .skills-logo-wrapper img,i {
             margin-right: 10px;
         }
     }

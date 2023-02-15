@@ -42,6 +42,10 @@ function JourneyText(props) {
                 skillsArray.push('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg');
             }
 
+            else if(skill == 'django-white') {
+                skillsArray.push('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg');
+            }
+            
             else if(skill == 'nodejs') {
                 skillsArray.push('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg');
             }
@@ -66,6 +70,9 @@ function JourneyText(props) {
             <p style={{fontSize: '1.2em'}}>{props.text.description}</p>
             <div className="skills-logo-wrapper">
                 {skillsArray.map((skill) => {
+                    if(skill == 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg') {
+                        return <img src={skill} aria-django="true"/>
+                    }
                     return <img src={skill} />
                 })}
             </div>
