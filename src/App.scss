@@ -72,6 +72,11 @@ body {
     top: #{random_range(50, 300)}px;
 }
 
+.nav-bar-wrapper {
+    position: sticky;
+    top: 0px;
+}
+
 .nav-bar-wrapper div{
     margin-right: 20px;
     margin-left: 20px;
