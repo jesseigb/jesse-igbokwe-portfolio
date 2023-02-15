@@ -30,7 +30,7 @@ function FullAbout() {
     return (
         <Container className='full-window' fluid>
             <Row className='window-content full'>
-                <Row className="window-header">
+                <Row style={{cursor: 'default'}} className="window-header">
                     <img onClick={() => goToPage('')} src={leftArrow} draggable="false"></img>
                     <p>About</p>
                 </Row>

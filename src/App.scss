@@ -27,11 +27,16 @@ body {
     overflow-y: overlay;
 }
 
+.header-container {
+    position: sticky;
+    top: 0px;
+}
+
 .desktop-wrapper {
     position: absolute;
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.3);;
-    height: 95.2vh;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 95.3vh;
     margin-top: 20px;
 
     display: grid;
@@ -39,7 +44,6 @@ body {
     justify-content: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding-top: 1px;
     overflow-x: hidden;
 } 
 
@@ -52,7 +56,6 @@ body {
 
 .desktop-wrapper div.window{
     position: absolute;
-    
 }
 
 .contact {
@@ -70,11 +73,6 @@ body {
 .work {
     left: #{random_range(100, 750)}px;
     top: #{random_range(50, 300)}px;
-}
-
-.nav-bar-wrapper {
-    position: sticky;
-    top: 0px;
 }
 
 .nav-bar-wrapper div{

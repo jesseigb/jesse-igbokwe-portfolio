@@ -11,7 +11,7 @@ function Contact(props) {
                     <p>Contact</p>
                 </Row>
                 <Row className="window-content work-minimised">
-                    <Col className='h-100' xs={12}>
+                    <Col xs={12}>
                         <h1>Get In Touch</h1>
                         <p style={{fontSize: '1.2em', width: '80%'}}>If you wanna get in touch, talk to me about a project collaboration or just say hello 
                             send me an email or contact me on my LinkedIn.
