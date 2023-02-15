@@ -81,7 +81,7 @@ function Work(props) {
                     <Col id='1' className='work-div' xs={12} style={{display: 'block', backgroundImage: `url(${g6Picture})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                         <div className='content-wrapper light'>
                             <div className='bubble-title'>
-                                <p>Appointment Management Project</p>
+                                <p><a href="https://booking-management-app.herokuapp.com/login">Appointment Management Project</a></p>
                             </div>
                             <div className="skills-logo-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
