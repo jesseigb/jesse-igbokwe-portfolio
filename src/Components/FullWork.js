@@ -2,9 +2,9 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import leftArrow from '../assets/img/left-arrow.png';
-import g6Picture from '../assets/img/g6picture.jpeg';
-import boxingPredictionPicture from '../assets/img/boxing-prediction-picture.jpg';
-import bookProjectPicture from '../assets/img/book-project-picture.jpg';
+import g6Picture from '../assets/img/g6picture.webp';
+import boxingPredictionPicture from '../assets/img/boxing-prediction-picture.webp';
+import bookProjectPicture from '../assets/img/book-project-picture.wep';
 
 function FullWork() {
 
