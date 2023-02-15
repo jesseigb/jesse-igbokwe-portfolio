@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
     font-family: 'DM Serif Display', serif;
     margin: 0;
@@ -359,14 +363,12 @@ body {
 
 }
 
-
 .title-content {
     position: relative;
     display: grid;
     justify-content: center;
     align-items: center;
 }
-
 
 @keyframes mouse-animation {
     0% {opacity: 0; position: relative; top: -10px;}
@@ -376,28 +378,6 @@ body {
 @keyframes slide-in-animation { 
     0% { position: relative; right: 10px ;opacity: 0.0; } 
     100% {position: relative; right: 0px;  opacity: 1;}
-}
-
-@keyframes open-explore-menu-animation { 
-    0% { position: relative; bottom: 0px ;opacity: 0.0; } 
-    100% {position: relative; bottom: -10px;  opacity: 1;}
-}
-
-@keyframes close-explore-menu-animation { 
-    0% { position: relative; top: 10px ;opacity: 1; } 
-    100% {position: relative; top: 0px;  opacity: 0;}
-}
-
-.work-menu-buttons {
-    opacity: 0;
-}
-
-.open-menu {
-    animation: open-explore-menu-animation 0.3s ease-in-out 0s forwards;
-}
-
-.close-menu {
-    animation: close-explore-menu-animation 0.3s ease-in-out 0s forwards;
 }
 
 .slide-in-animation {
@@ -436,8 +416,8 @@ body {
 }
 
 .journey-container {
-
     position: relative;
+    bottom: 5%;
     height: auto;
 
     .skills-logo-wrapper img {
@@ -466,7 +446,6 @@ body {
 
 .introduction-container {
     text-align: center;
-
     padding-left: 10%;
     padding-right: 10%;
 
@@ -573,8 +552,25 @@ body {
     border-radius: 100%;
 }
 
-::-webkit-scrollbar {
-    display: none;
+// [Contact Page] Styling 
+.contact-content {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+        padding: 10%;
+    }
+
+
+    h1 {
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1.1em;
+    }
 }
 
 //Get rid of timeline timepoints text to avoid overlaps [Work Page]
@@ -586,8 +582,14 @@ body {
     }
 }
 
-//Make navigation bar responsive [App]
+//Responsivness for small tablets and mobile devices [App]
 @media only screen and (max-width: 850px) {   
+
+    .window-header {
+        img {
+            display: block;
+        }
+    }
 
     .nav-bar-wrapper div{
         width: 32.5%;
@@ -628,6 +630,7 @@ body {
         img {
             width: 25px;
             height: auto;
+            opacity: 0.8;
         }
     }
 
@@ -654,6 +657,7 @@ body {
     }
 }
 
+//Prevent mobile sticky hover effect
 @media (hover:none) {
     .nav-bar-wrapper div {
         &:hover {
