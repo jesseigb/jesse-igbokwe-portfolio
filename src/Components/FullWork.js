@@ -76,11 +76,12 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" />
                         </div>
                         <div onScroll={() => checkSectionScrollTop(1)} className='work-text-container' aria-scrollY="0">
-                            <p>G6 Appointment Management is a Django-based web system for the final project of a Software Engineering Bootcamp. It allows a patient to create appointments and file reports with their personal doctor.
+                            <p>G6 Appointment Management is a Django-based web system for the final project of a Software Engineering Bootcamp. 
+                                <br></br>It allows a patient to create appointments and file reports with their personal doctor.
                                 <br></br>Additionally, it has implemented a dashboard for doctors where they can view, edit, delete and create slots for upcoming appointments and reply to reports.
                             </p>
                             <p>
-                                On the back-end there is a secure PostgreSQL database that handles all the requests and entries from doctors and patients. On the front-end Bootstrap and CSS make the website accessible and responsive.
+                                On the back-end there is a secure PostgreSQL database that handles all the requests and entries from doctors and patients and on the front-end Bootstrap and CSS make the website accessible and responsive.
                                 <br></br>Furthermore, GitHub was a crucial technology used to share the project codes with my team members.
                             </p>
                             <div className='scroll-text-section'><span>Scroll To Read More</span></div>
