@@ -8,22 +8,23 @@ import bookProjectPicture from '../assets/img/book-project-picture.webp';
 
 function FullWork() {
 
+    
     const navigate = useNavigate();
-
+    
     const goToPage = (page) => {
         navigate('/' + page);
     };
-
+    
     /**
      * Function that toggles the demo videos
      * @param {int} imageInt Selector for the specific image
      * @param {int} textInt Selector for the specific text
      * @param {string} content Specifies which work experience content the image should show
-     */
+    */
     const controlDemo = (imageInt, textInt, content) => {
         let selectedImage = document.querySelectorAll('.work-image')[imageInt - 1];
         let text = document.querySelectorAll('.bubble-title p')[textInt - 1];
-
+        
         if(selectedImage.classList.contains('demo')) {
             selectedImage.classList.remove('demo');
             text.innerHTML = 'Open Demo';
@@ -48,7 +49,12 @@ function FullWork() {
             }
         }
     }
-
+    
+    //Check if scrollable div is at the top
+    const checkSectionScrollTop = (int) => {
+        const textSection = document.querySelectorAll('.work-text-container')[int - 1];
+        textSection.setAttribute('aria-scrollY', textSection.scrollTop);
+    }
     return (
         <Container className='full-window' fluid>
 
@@ -69,7 +75,7 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"/>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" />
                         </div>
-                        <div className='work-text-container'>
+                        <div onScroll={() => checkSectionScrollTop(1)} className='work-text-container' aria-scrollY="0">
                             <p>G6 Appointment Management is a Django-based web system for the final project of a Software Engineering Bootcamp. It allows a patient to create appointments and file reports with their personal doctor.
                                 <br></br>Additionally, it has implemented a dashboard for doctors where they can view, edit, delete and create slots for upcoming appointments and reply to reports.
                             </p>
@@ -99,7 +105,7 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                         </div> 
-                        <div className='work-text-container'>
+                        <div onScroll={() => checkSectionScrollTop(2)} className='work-text-container' aria-scrollY="0">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                             <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -127,7 +133,7 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" />
                         </div> 
-                        <div className='work-text-container'>
+                        <div onScroll={() => checkSectionScrollTop(3)} className='work-text-container' aria-scrollY="0">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                             <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 

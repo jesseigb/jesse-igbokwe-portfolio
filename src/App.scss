@@ -621,43 +621,39 @@ body {
             overflow: scroll;
             width: 90%;
 
-            &:active > .scroll-text-section {
-                height: 0px;
-
-                span {
-                    display: none;
-                }
-            }
-
-            .scroll-text-section {
-
-                display: block;
-
-                &.white {
+            &[aria-scrollY = "0"] {
+                
+                .scroll-text-section {
+    
+                    display: block;
+    
+                    &.white {
+                        background: linear-gradient(to bottom, 
+                                rgba(255,0,0,0), rgba(255,255,255, 0.8));
+    
+                        span {
+                            color: black;
+                        }
+                    }
+    
                     background: linear-gradient(to bottom, 
-                            rgba(255,0,0,0), rgba(255,255,255, 0.8));
-
+                                rgba(255,0,0,0), rgba(25,25,25, 0.8));
+                    position: absolute;
+                    bottom: 0px;
+                    height: 30%;
+                    width: 100%;
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 0.2s;
+    
                     span {
-                        color: black;
+                        margin-top: 20px;
+                        color: white;
                     }
                 }
-
-                background: linear-gradient(to bottom, 
-                            rgba(255,0,0,0), rgba(25,25,25, 0.8));
-                position: absolute;
-                bottom: 0px;
-                height: 30%;
-                width: 100%;
-                display: grid;
-                align-items: center;
-                justify-content: center;
-                transition: 0.2s;
-
-                span {
-                    margin-top: 20px;
-                    color: white;
-                }
             }
+
 
             p {
                 width: 100% !important;
