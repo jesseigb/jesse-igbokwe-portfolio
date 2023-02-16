@@ -77,6 +77,7 @@ function FullWork() {
                                 On the back-end there is a secure PostgreSQL database that handles all the requests and entries from doctors and patients. On the front-end Bootstrap and CSS make the website accessible and responsive.
                                 <br></br>Furthermore, GitHub was a crucial technology used to share the project codes with my team members.
                             </p>
+                            <div className='scroll-text-section'><span>Scroll To Read More</span></div>
                         </div> 
                         <div className='bubble-title'><p><a href="https://booking-management-app.herokuapp.com/login">Go To Website</a></p></div>
                     </div>
@@ -103,6 +104,7 @@ function FullWork() {
                             <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                             <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <div className='scroll-text-section white'><span>Scroll To Read More</span></div>
                         </div> 
                         <div onClick={() => controlDemo(2,4, 'boxing')} className='bubble-title light'><p>Open Demo</p></div>
                     </div>
@@ -130,6 +132,7 @@ function FullWork() {
                             <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                             <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <div className='scroll-text-section'><span>Scroll To Read More</span></div>
                         </div> 
                         <div onClick={() => controlDemo(3,6, 'book')} className='bubble-title'><p>Open Demo</p></div>
                     </div>
