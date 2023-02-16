@@ -53,8 +53,17 @@ function FullWork() {
     //Check if scrollable div is at the top
     const checkSectionScrollTop = (int) => {
         const textSection = document.querySelectorAll('.work-text-container')[int - 1];
-        textSection.setAttribute('aria-scrollY', textSection.scrollTop);
+        const scrollTextSection = document.querySelectorAll('.scroll-text-section')[int - 1];
+
+        if(textSection.scrollTop > 0) {
+            scrollTextSection.classList.add('hidden');
+        }
+        else {
+            scrollTextSection.classList.remove('hidden');
+        }
+        
     }
+    
     return (
         <Container className='full-window' fluid>
 
@@ -75,7 +84,7 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"/>
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" />
                         </div>
-                        <div onScroll={() => checkSectionScrollTop(1)} className='work-text-container' aria-scrollY="0">
+                        <div onScroll={() => checkSectionScrollTop(1)} className='work-text-container'>
                             <p>G6 Appointment Management is a Django-based web system for the final project of a Software Engineering Bootcamp. 
                                 <br></br>It allows a patient to create appointments and file reports with their personal doctor.
                                 <br></br>Additionally, it has implemented a dashboard for doctors where they can view, edit, delete and create slots for upcoming appointments and reply to reports.
@@ -106,7 +115,7 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                         </div> 
-                        <div onScroll={() => checkSectionScrollTop(2)} className='work-text-container' aria-scrollY="0">
+                        <div onScroll={() => checkSectionScrollTop(2)} className='work-text-container'>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                             <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -134,7 +143,7 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" />
                         </div> 
-                        <div onScroll={() => checkSectionScrollTop(3)} className='work-text-container' aria-scrollY="0">
+                        <div onScroll={() => checkSectionScrollTop(3)} className='work-text-container'>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                             <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 

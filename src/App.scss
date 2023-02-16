@@ -579,6 +579,10 @@ body {
     }
 }
 
+.scroll-text-section {
+    display: none;
+}
+
 //Get rid of timeline timepoints text to avoid overlaps [Work Page]
 @media only screen and (max-width: 650px) {
     .timeline-bar {
@@ -586,10 +590,6 @@ body {
             display: none;
         }
     }
-}
-
-.scroll-text-section {
-    display: none;
 }
 
 //Responsivness for small tablets and mobile devices [App]
@@ -614,18 +614,17 @@ body {
     .work-content-container {
 
         .work-text-container {
-
-
+            
             position: relative;
             height: clamp(15em, 3vw, 10em);
             overflow: scroll;
             width: 90%;
 
-            &[aria-scrollY = "0"] {
-                
-                .scroll-text-section {
-    
-                    display: block;
+            .scroll-text-section {
+
+                &.hidden {
+                    height: 0px;
+                }
     
                     &.white {
                         background: linear-gradient(to bottom, 
@@ -633,6 +632,7 @@ body {
     
                         span {
                             color: white;
+                            display: block;
                         }
                     }
     
@@ -645,14 +645,13 @@ body {
                     display: grid;
                     align-items: center;
                     justify-content: center;
-                    transition: 0.2s;
+                    transition: 0.1s;
     
                     span {
                         margin-top: 20px;
                         color: white;
                     }
                 }
-            }
 
 
             p {
