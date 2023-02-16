@@ -81,7 +81,7 @@ function FullWork() {
                                 <br></br>Additionally, it has implemented a dashboard for doctors where they can view, edit, delete and create slots for upcoming appointments and reply to reports.
                             </p>
                             <p>
-                                On the back-end there is a secure PostgreSQL database that handles all the requests and entries from doctors and patients and on the front-end Bootstrap and CSS make the website accessible and responsive.
+                                On the back-end there is a secure PostgreSQL database that handles all the requests and entries from doctors and patients; on the front-end Bootstrap and CSS make the website accessible and responsive.
                                 <br></br>Furthermore, GitHub was a crucial technology used to share the project codes with my team members.
                             </p>
                             <div className='scroll-text-section'><span>Scroll To Read More</span></div>
