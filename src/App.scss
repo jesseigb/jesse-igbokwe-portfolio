@@ -622,6 +622,10 @@ body {
 
             &:active > .scroll-text-section {
                 height: 0px;
+
+                span {
+                    display: none;
+                }
             }
 
             .scroll-text-section {
