@@ -153,7 +153,7 @@ function FullWork() {
                             <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <div className='scroll-text-section'><span>Scroll To Read More</span></div>
                         </div> 
-                        <div onClick={() => controlDemo(3,6, 'book')} className='bubble-title'><p>Open Demo</p></div>
+                        <div onClick={() => controlDemo(3,7, 'book')} className='bubble-title'><p>Open Demo</p></div>
                     </div>
                 </Col>
                 <Col className='work-container' lg={6}>
