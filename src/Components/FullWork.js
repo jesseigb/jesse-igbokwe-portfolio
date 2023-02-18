@@ -116,10 +116,11 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                         </div> 
                         <div onScroll={() => checkSectionScrollTop(2)} className='work-text-container'>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>For my university final year project I decided to develop a boxing data visualisation web application using Node JS. 
+                            <br></br>Based on the user's height, arm length and boxing stance the web application will calculate the match outcome against another existing boxer.</p>
+                            <p>The library Puppeteer is the tool implemented to scrape the largest boxing database <a style={{color: 'white'}} href='https://boxrec.com'>Boxrec.com</a> to retrieve the necessary data about existing boxers chose by the user. 
+                            <br></br>Express.js was also utilized as it allowed me to create an API used to fetch, send data upon request and run a local server.</p>
+                            <p>Finally, after data gathering and calculations, the results will be shown on text and charts using the library Chart.js</p>
                             <div className='scroll-text-section white'><span>Scroll To Read More</span></div>
                         </div> 
                         <div onClick={() => controlDemo(2,4, 'boxing')} className='bubble-title light'><p>Open Demo</p></div>
