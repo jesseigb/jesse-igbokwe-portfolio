@@ -187,7 +187,7 @@ body {
                     bottom: 20px;
                 }
 
-                > img {
+                > img, video {
                     height: auto;
                     width: 80%;
                     margin-bottom: 30px;
@@ -711,8 +711,8 @@ body {
 @media (hover:none) {
     .nav-bar-wrapper div {
         &:hover {
-            background: #191919;
-            width: 32.5%;
+        background: #191919;
+        width: 32.5%;
         }
     }
 }

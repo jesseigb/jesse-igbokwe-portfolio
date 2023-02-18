@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import leftArrow from '../assets/img/left-arrow.png';
 import g6Picture from '../assets/img/g6picture.webp';
 import boxingPredictionPicture from '../assets/img/boxing-prediction-picture.webp';
 import bookProjectPicture from '../assets/img/book-project-picture.webp';
+import boxrecVideo from '../assets/vids/boxrec-video.mp4';
 
 function FullWork() {
 
@@ -17,37 +18,55 @@ function FullWork() {
     
     /**
      * Function that toggles the demo videos
-     * @param {int} imageInt Selector for the specific image
+     * @param {int} mediaInt Selector for the specific media element
      * @param {int} textInt Selector for the specific text
-     * @param {string} content Specifies which work experience content the image should show
+     * @param {string} content Specifies which work experience content the media should show
     */
-    const controlDemo = (imageInt, textInt, content) => {
-        let selectedImage = document.querySelectorAll('.work-image')[imageInt - 1];
+    const controlDemo = (mediaInt, textInt, content) => {
+        let selectedMedia = document.querySelectorAll('.work-image')[mediaInt - 1];
         let text = document.querySelectorAll('.bubble-title p')[textInt - 1];
-        
-        if(selectedImage.classList.contains('demo')) {
-            selectedImage.classList.remove('demo');
-            text.innerHTML = 'Open Demo';
+
+        // Video element for project demonstrations
+        let boxrecVideoElement = document.createElement("video");
+        boxrecVideoElement.classList.add("work-image");
+        boxrecVideoElement.setAttribute("controls", "");
+
+        //Source for video elements
+        let boxrecVideoSource = document.createElement("source");
+        boxrecVideoElement.appendChild(boxrecVideoSource);
+        boxrecVideoSource.src = boxrecVideo;
+        boxrecVideoSource.type = "video/mp4";
+
+        if(selectedMedia.classList.contains('demo')) {
+            selectedMedia.classList.remove('demo');
+            text.innerHTML = 'Watch Demo';
 
             if(content == 'boxing') {
-                selectedImage.src = boxingPredictionPicture;
+                let boxrecImage = document.createElement("img");
+                boxrecImage.classList.add("work-image");
+                boxrecImage.src = boxingPredictionPicture;
+                selectedMedia.replaceWith(boxrecImage);
+                selectedMedia = boxrecImage;
             }
             else if(content == 'book') {
-                selectedImage.src = bookProjectPicture;
+                selectedMedia.src = bookProjectPicture;
             }
         }
         
         else {
-            selectedImage.classList.add('demo');
+            selectedMedia.classList.add('demo');
             text.innerHTML = 'Close Demo';
-
+            
             if(content == 'boxing') {
-                selectedImage.src = boxingPredictionPicture;
+                selectedMedia.replaceWith(boxrecVideoElement);
+                boxrecVideoElement.classList.add("demo");
+                selectedMedia = boxrecVideoElement;
             }
             else if(content == 'book') {
-                selectedImage.src = bookProjectPicture;
+                selectedMedia.src = bookProjectPicture;
             }
         }
+        console.log(selectedMedia);
     }
     
     //Check if scrollable div is at the top
@@ -124,7 +143,7 @@ function FullWork() {
                             
                             <div className='scroll-text-section white'><span>Scroll To Read More</span></div>
                         </div> 
-                        <div onClick={() => controlDemo(2,4, 'boxing')} className='bubble-title light'><p>Open Demo</p></div>
+                        <div onClick={() => controlDemo(2,4, 'boxing')} className='bubble-title light'><p>Watch Demo</p></div>
                         <div className='bubble-title light'><p><a style={{color: 'white'}} href="https://github.com/jesseigb/boxing-prediction-project">Open On GitHub</a></p></div>
                     </div>
                 </Col>
