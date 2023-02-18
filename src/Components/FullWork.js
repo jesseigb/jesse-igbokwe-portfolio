@@ -116,11 +116,11 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                         </div> 
                         <div onScroll={() => checkSectionScrollTop(2)} className='work-text-container'>
-                            <p>For my university final year project I decided to develop a boxing data visualisation web application using Node JS. 
-                            <br></br>Based on the user's height, arm length and boxing stance the web application will calculate the match outcome against another existing boxer.</p>
-                            <p>The library Puppeteer is the tool implemented to scrape the largest boxing database <a style={{color: 'white'}} href='https://boxrec.com'>Boxrec.com</a> to retrieve the necessary data about existing boxers chose by the user. 
-                            <br></br>Express.js was also utilized as it allowed me to create an API used to fetch, send data upon request and run a local server.</p>
-                            <p>Finally, after data gathering and calculations, the results will be shown on text and charts using the library Chart.js</p>
+                            <p>For my university final year project I decided to develop a boxing data visualisation web application using NodeJS. 
+                            <br></br>Based on the user's height, arm length and boxing stance a calculation will be made to predict a possible match outcome against another existing boxer.</p>
+                            <p>Puppeteer is the library implemented to scrape the largest boxing database <a style={{color: 'white'}} href='https://boxrec.com'>Boxrec.com</a> and retrieve necessary data about selected professional boxers. 
+                            <br></br>Express.js was also utilised as it allowed me to create an API used to fetch, send data upon request and run a local server.</p>
+                            <p>Finally, after data gathering and calculations, the results will be shown on text and charts using charting library, Chart.js</p>
                             <div className='scroll-text-section white'><span>Scroll To Read More</span></div>
                         </div> 
                         <div onClick={() => controlDemo(2,4, 'boxing')} className='bubble-title light'><p>Open Demo</p></div>
