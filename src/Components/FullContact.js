@@ -31,6 +31,10 @@ function FullAbout() {
                         <div className='bubble-title'>
                             <p><a href='https://www.linkedin.com/in/jesse-igbokwe-79341b203/'>LinkedIn</a></p>
                         </div>
+                        <br></br>
+                        <div className='bubble-title'>
+                            <p><a href='https://github.com/jesseigb'>GitHub</a></p>
+                        </div>
                     </div>
                 </Col>
             </Row>

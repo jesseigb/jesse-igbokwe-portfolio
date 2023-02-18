@@ -121,6 +121,7 @@ function FullWork() {
                             <p>Puppeteer is the library implemented to scrape the largest boxing database <a style={{color: 'white'}} href='https://boxrec.com'>Boxrec.com</a> and retrieve necessary data about selected professional boxers. 
                             <br></br>Express.js was also utilised as it allowed me to create an API used to fetch, send data upon request and run a local server.</p>
                             <p>Finally, after data gathering and calculations, the results will be shown on text and charts using charting library, Chart.js</p>
+                            
                             <div className='scroll-text-section white'><span>Scroll To Read More</span></div>
                         </div> 
                         <div onClick={() => controlDemo(2,4, 'boxing')} className='bubble-title light'><p>Open Demo</p></div>
