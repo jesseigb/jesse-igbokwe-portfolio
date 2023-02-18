@@ -116,7 +116,7 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                         </div> 
                         <div onScroll={() => checkSectionScrollTop(2)} className='work-text-container'>
-                            <p>For my university final year project I decided to develop a boxing data visualisation web application using NodeJS. 
+                            <p>For my university final year project I developed a single-page boxing data visualisation web application using NodeJS. 
                             <br></br>Based on the user's height, arm length and boxing stance a calculation will be made to predict a possible match outcome against another existing boxer.</p>
                             <p>Puppeteer is the library implemented to scrape the largest boxing database <a style={{color: 'white'}} href='https://boxrec.com'>Boxrec.com</a> and retrieve necessary data about selected professional boxers. 
                             <br></br>Express.js was also utilised as it allowed me to create an API used to fetch, send data upon request and run a local server.</p>
