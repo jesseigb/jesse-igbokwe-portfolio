@@ -322,6 +322,10 @@ body {
         background: white;
         color: #191919;
         border: 1px solid white;
+
+        a {
+            color: #191919 !important;
+        }
     }
 
     a {
@@ -613,10 +617,14 @@ body {
 
     .work-content-container {
 
+        > img {
+            width: 90% !important;
+        }
+
         .work-text-container {
             
             position: relative;
-            height: clamp(15em, 3vw, 10em);
+            height: clamp(18em, 3vw, 10em);
             overflow: scroll;
             width: 90%;
 
@@ -661,7 +669,6 @@ body {
         }
 
         .bubble-title {
-            margin-right: 15%;
             margin-top: 20px;
         }
     }

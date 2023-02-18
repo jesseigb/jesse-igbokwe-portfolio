@@ -125,6 +125,7 @@ function FullWork() {
                             <div className='scroll-text-section white'><span>Scroll To Read More</span></div>
                         </div> 
                         <div onClick={() => controlDemo(2,4, 'boxing')} className='bubble-title light'><p>Open Demo</p></div>
+                        <div className='bubble-title light'><p><a style={{color: 'white'}} href="https://github.com/jesseigb/boxing-prediction-project">Open On GitHub</a></p></div>
                     </div>
                 </Col>
                 <Col className='work-container' lg={6} xs={12}>
