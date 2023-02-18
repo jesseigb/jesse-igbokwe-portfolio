@@ -74,7 +74,7 @@ function Work(props) {
         <Draggable handle='.window-header' bounds='parent'>
             <Container className="window box work" id={props.active ? "active-window" : "hidden-window"}>
                 <Row className="window-header">
-                    <img className='expand' onClick={() => goToPage('work')} onTouchEnd={() => goToPage('work')} src={expandIcon} draggable="false"></img>
+                    <img className='nav-button' onClick={() => goToPage('work')} onTouchEnd={() => goToPage('work')} src={expandIcon} draggable="false"></img>
                     <p>Work</p>
                 </Row>
                 <Row className="window-content work-minimised">
@@ -93,8 +93,7 @@ function Work(props) {
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" />
                             </div> 
                             <div className='work-description-div'>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p>G6 Appointment Management is a Django-based web system. <br></br>It allows a patient to create appointments and file reports with their personal doctor.</p>
                             </div>
                             <div className='line'></div>
                         </div>
@@ -109,7 +108,7 @@ function Work(props) {
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                             </div> 
                             <div className='work-description-div light'>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p>Based on the user's height, arm length and boxing stance a calculation will be made to predict a possible match outcome against another existing boxer.</p>
                             </div>
                             <div style={{background: 'white'}} className='line'></div>
                         </div>

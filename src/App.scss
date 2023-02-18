@@ -150,9 +150,10 @@ body {
         cursor: pointer;
     }
 
-    img.expand {
+    img.nav-button{
         width: 45px;
         left: 10px;
+        animation: navbar-button-animation 2s ease-in-out 0s infinite;
     }
 
     p {
@@ -384,8 +385,14 @@ body {
 }
 
 @keyframes slide-in-animation { 
-    0% { position: relative; right: 10px ;opacity: 0.0; } 
+    0% { position: relative; right: 10px; opacity: 0.0; } 
     100% {position: relative; right: 0px;  opacity: 1;}
+}
+
+@keyframes navbar-button-animation { 
+    0% { transform: scale(1); } 
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
 }
 
 .slide-in-animation {

@@ -114,7 +114,7 @@ function FullWork() {
                             </p>
                             <div className='scroll-text-section'><span>Scroll To Read More</span></div>
                         </div> 
-                        <div className='bubble-title'><p><a href="https://booking-management-app.herokuapp.com/login">Go To Website</a></p></div>
+                        <div className='bubble-title'><p><a href="https://booking-management-app.herokuapp.com/login" target="_blank" rel="noopener noreferrer">Go To Website</a></p></div>
                     </div>
                 </Col>
                 <Col className='work-container' lg={6} xs={12}>
@@ -124,7 +124,7 @@ function FullWork() {
                 </Col>
             </Row>
 
-            <Row className='window-content full dark'>
+            <Row id='boxing-prediction-project' className='window-content full dark'>
                 <Col className='work-container' lg={6} xs={12}>
                     <div className='work-content-container'>
                         <div className='bubble-title light'><p>Boxing Prediction Project</p></div>
@@ -144,7 +144,7 @@ function FullWork() {
                             <div className='scroll-text-section white'><span>Scroll To Read More</span></div>
                         </div> 
                         <div onClick={() => controlDemo(2,4, 'boxing')} className='bubble-title light'><p>Watch Demo</p></div>
-                        <div className='bubble-title light'><p><a style={{color: 'white'}} href="https://github.com/jesseigb/boxing-prediction-project">Open On GitHub</a></p></div>
+                        <div className='bubble-title light'><p><a style={{color: 'white'}} href="https://github.com/jesseigb/boxing-prediction-project" target="_blank" rel="noopener noreferrer">Open On GitHub</a></p></div>
                     </div>
                 </Col>
                 <Col className='work-container' lg={6} xs={12}>
