@@ -93,7 +93,7 @@ function FullAbout() {
 
                             <div onClick={() => setJourneyObject({
                                 title: 'Skills City', 
-                                subTitle: 'Software Engineering Bootcamp Experience', 
+                                subTitle: 'Software Engineering Bootcamp', 
                                 description: "Thanks to this experience I expanded knowledge on web development tools like React. Also, during this bootcamp I was in a team with a client where I was resposible for the development of a booking managment web-based system for a private surgery by adopting key web technologies like Python-based framework Django and Github.",
                                 skills: ['html', 'css', 'javascript', 'react', 'python', 'django-white', 'github', 'bootstrap']})} 
                                 className='timeline-fourth-point'></div>
