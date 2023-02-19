@@ -70,7 +70,6 @@ function FullAbout() {
                     </div>
                     <div className='timeline-bar-container'>
                         <div className='timeline-bar'>
-                            <p id='first-text'>Uni - Year 1</p>
                             <div onClick={() => setJourneyObject({
                                 title: 'University Of Salford - Year 1', 
                                 subTitle: 'BSc Computer Science with Web Development', 
@@ -78,7 +77,6 @@ function FullAbout() {
                                 skills: ['html', 'css', 'javascript', 'sql', 'linux']})} 
                                 className='timeline-first-point'></div>
 
-                            <p id='second-text'>Uni - Year 2</p>
                             <div onClick={() => setJourneyObject({
                                 title: 'University Of Salford - Year 2', 
                                 subTitle: 'BSc Computer Science with Web Development', 
@@ -86,7 +84,6 @@ function FullAbout() {
                                 skills: ['html', 'css', 'javascript', 'sql', 'php', 'java']})}
                                 className='timeline-second-point'></div>
 
-                            <p id='third-text'>Uni - Year 3</p>
                             <div onClick={() => setJourneyObject({
                                 title: 'University Of Salford - Final Year', 
                                 subTitle: 'BSc Computer Science with Web Development', 
@@ -94,13 +91,18 @@ function FullAbout() {
                                 skills: ['html', 'css', 'javascript', 'nodejs', 'php', 'symfony']})} 
                                 className='timeline-third-point'></div>
 
-                            <p id='fourth-text'>Bootcamp</p>
                             <div onClick={() => setJourneyObject({
                                 title: 'Skills City', 
                                 subTitle: 'Software Engineering Bootcamp Experience', 
                                 description: "Thanks to this experience I was able to further expand knowledge on web development tools like React. Additionally, during this bootcamp I was placed in a team with a client where I was resposible for the development of a booking managment web-based system for a private surgery; I got this done by adopting key web technologies like Python-based framework Django and Github.",
                                 skills: ['html', 'css', 'javascript', 'react', 'python', 'django-white', 'github', 'bootstrap']})} 
                                 className='timeline-fourth-point'></div>
+                        </div>
+                        <div className='timeline-bar-texts'>
+                            <p>Uni - Year 1</p>
+                            <p>Uni - Year 2</p>
+                            <p>Uni - Year 3</p>
+                            <p>Bootcamp</p>
                         </div>
                     </div>
                 </Col>
