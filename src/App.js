@@ -1,5 +1,5 @@
 import './App.scss';
-import {BrowserRouter as Router, Routes, Route, useNavigate} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, useNavigate, useLocation} from 'react-router-dom';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Work from './Components/Work';
@@ -42,9 +42,9 @@ function App() {
     
     const navbarButtons = document.querySelector('.nav-bar-wrapper').childNodes;
     
-    //Mobile Navigation:
+    //Mobile and cross page navigation:
     //Only allow one button to be active and direct to appropriate page 
-    if(isMobile) {
+    if(isMobile || window.location.pathname != '/') {
 
       //Toggle navbar CSS active styling and redirect
       if(buttonName == 'about') {
@@ -65,17 +65,13 @@ function App() {
         navbarButtons[0].classList.add('navbar-active');
         navbarButtons[1].classList.remove('navbar-active');
         navbarButtons[2].classList.remove('navbar-active');
-
-        //Only navigate to contact page when browser is mobile
-        if(isMobile) {
-          goToPage('contact');
-        }
+        goToPage('contact');
       }
     }
 
-    //Desktop Navigation:
+    //Desktop home navigation:
     //Simply switch boolean to make windows visible and button active
-    if(!isMobile) {
+    if(!isMobile && window.location.pathname == '/') {
       if(buttonName == 'work') {
         setWorkActive(!isWorkActive);
         if (isWorkActive ? navbarButtons[1].classList.add('navbar-active') : navbarButtons[1].classList.remove('navbar-active'));
