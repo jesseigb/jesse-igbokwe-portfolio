@@ -115,7 +115,7 @@ function Work(props) {
                     </Col>
                     <Col id='3' className='work-div' xs={12} style={{backgroundImage: `url(${bookProjectPicture})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', display: 'none' }}>
                         <div className='content-wrapper'>
-                            <div className='bubble-title'><p>Book Database Project</p></div>
+                            <div className='bubble-title'><p>Book Reviewing Project</p></div>
                             <div className="skills-logo-wrapper">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
@@ -124,7 +124,7 @@ function Work(props) {
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" />
                             </div> 
                             <div className='work-description-div'>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                <p>This is a book reviewing website developed with Symfony and Twig which allows users to add and review books. It also integrates The New York Times books API.</p>
                             </div>
                             <div style={{background: 'black'}} className='line'></div>
                         </div>

@@ -6,6 +6,7 @@ import g6Picture from '../assets/img/g6picture.webp';
 import boxingPredictionPicture from '../assets/img/boxing-prediction-picture.webp';
 import bookProjectPicture from '../assets/img/book-project-picture.webp';
 import boxrecVideo from '../assets/vids/boxrec-video.mp4';
+import bookReviewVideo from '../assets/vids/book-review-video.mp4';
 
 function FullWork() {
 
@@ -27,15 +28,16 @@ function FullWork() {
         let text = document.querySelectorAll('.bubble-title p')[textInt - 1];
 
         // Video element for project demonstrations
-        let boxrecVideoElement = document.createElement("video");
-        boxrecVideoElement.classList.add("work-image");
-        boxrecVideoElement.setAttribute("controls", "");
+        let videoElement = document.createElement("video");
+        videoElement.classList.add("work-image");
+        videoElement.setAttribute("controls", "");
+        videoElement.setAttribute("autoplay", "");
 
         //Source for video elements
-        let boxrecVideoSource = document.createElement("source");
-        boxrecVideoElement.appendChild(boxrecVideoSource);
-        boxrecVideoSource.src = boxrecVideo;
-        boxrecVideoSource.type = "video/mp4";
+        let videoSource = document.createElement("source");
+        videoElement.appendChild(videoSource);
+        videoSource.src = (content == 'boxing') ? boxrecVideo : bookReviewVideo;
+        videoSource.type = "video/mp4";
 
         if(selectedMedia.classList.contains('demo')) {
             selectedMedia.classList.remove('demo');
@@ -49,7 +51,11 @@ function FullWork() {
                 selectedMedia = boxrecImage;
             }
             else if(content == 'book') {
-                selectedMedia.src = bookProjectPicture;
+                let bookReviewImage = document.createElement("img");
+                bookReviewImage.classList.add("work-image");
+                bookReviewImage.src = bookProjectPicture;
+                selectedMedia.replaceWith(bookReviewImage);
+                selectedMedia = bookReviewImage;
             }
         }
         
@@ -58,15 +64,16 @@ function FullWork() {
             text.innerHTML = 'Close Demo';
             
             if(content == 'boxing') {
-                selectedMedia.replaceWith(boxrecVideoElement);
-                boxrecVideoElement.classList.add("demo");
-                selectedMedia = boxrecVideoElement;
+                selectedMedia.replaceWith(videoElement);
+                videoElement.classList.add("demo");
+                selectedMedia = videoElement;
             }
             else if(content == 'book') {
-                selectedMedia.src = bookProjectPicture;
+                selectedMedia.replaceWith(videoElement);
+                videoElement.classList.add("demo");
+                selectedMedia = videoElement;
             }
         }
-        console.log(selectedMedia);
     }
     
     //Check if scrollable div is at the top
@@ -157,7 +164,7 @@ function FullWork() {
             <Row className='window-content full'>
                 <Col className='work-container' lg={6}>
                     <div className='work-content-container'>
-                        <div className='bubble-title'><p>Book Database Project</p></div>
+                        <div className='bubble-title'><p>Book Reviewing Project</p></div>
                         <div className="skills-logo-wrapper">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
@@ -166,13 +173,14 @@ function FullWork() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" />
                         </div> 
                         <div onScroll={() => checkSectionScrollTop(3)} className='work-text-container'>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <br></br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>During the second year of university I carried out a project using PHP framework Symfony and a modern template engine Twig. 
+                                <br></br>This consisted in creating a book reviewing website where you can add and review books. 
+                                <br></br>Furthemore, thanks to REST API integration you are able to review books offered by the New York Times API and discover more about book authors thanks to Ninja Celebrity API.</p>
+                            <p>Behind the scenes there is a secure SQL database which stores all the users, books and reviews and a REST API which allows you to access all the books and user's reviews stored in the database.</p>
                             <div className='scroll-text-section'><span>Scroll To Read More</span></div>
                         </div> 
-                        <div onClick={() => controlDemo(3,7, 'book')} className='bubble-title'><p>Open Demo</p></div>
+                        <div onClick={() => controlDemo(3,7, 'book')} className='bubble-title'><p>Watch Demo</p></div>
+                        <div className='bubble-title'><p><a href="https://github.com/jesseigb/book-review-project" target="_blank" rel="noopener noreferrer">Open On GitHub</a></p></div>
                     </div>
                 </Col>
                 <Col className='work-container' lg={6}>
