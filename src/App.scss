@@ -129,6 +129,7 @@ body {
 }
 
 .window-header {
+    display: grid;
     align-items: center;
     background: #191919;
     color: white;
@@ -142,18 +143,26 @@ body {
     width: 100%;
     text-align: center;
 
-    img {
-        width: 60px;
-        height: auto;
+    button {
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        color: white;
+        width: 120px;
+        transition: all 0.2s;
         position: absolute;
-        left: clamp(1em, 2vw, 1em);
-        cursor: pointer;
-    }
+        display: flex;
+        margin-left: 10px;
 
-    img.nav-button{
-        width: 45px;
-        left: 10px;
-        animation: navbar-button-animation 2s ease-in-out 0s infinite;
+        &:hover {
+            width: 135px;
+        }
+
+        img {
+            width: 18px;
+            height: auto;
+            margin-top: 3px;
+        }
     }
 
     p {
@@ -389,12 +398,6 @@ body {
     100% {position: relative; right: 0px;  opacity: 1;}
 }
 
-@keyframes navbar-button-animation { 
-    0% { transform: scale(1); } 
-    50% {transform: scale(1.2);}
-    100% {transform: scale(1);}
-}
-
 .slide-in-animation {
     animation: slide-in-animation 0.2s ease-in-out 0s forwards;
 }
@@ -542,12 +545,6 @@ body {
 
 //Responsivness for small tablets and mobile devices [App]
 @media only screen and (max-width: 850px) {   
-
-    .window-header {
-        img {
-            display: none;
-        }
-    }
 
     .nav-bar-wrapper div{
         width: 32.5%;

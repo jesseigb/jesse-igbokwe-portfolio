@@ -95,7 +95,10 @@ function FullWork() {
 
             <Row className='window-content full'>
                 <Row style={{cursor: 'default'}} className="window-header">
-                    <img onClick={() => goToPage('')} src={leftArrow} draggable="false"></img>
+                    <button onClick={() => goToPage('')} onTouchEnd={() => goToPage('')}>
+                        <img src={leftArrow}></img>
+                        <p>Back</p>
+                    </button>
                     <p>Work</p>
                 </Row>
                 <Col style={{paddingTop: '60px'}} className='work-container' lg={6} xs={12}>

@@ -31,7 +31,10 @@ function FullAbout() {
         <Container className='full-window' fluid>
             <Row className='window-content full'>
                 <Row style={{cursor: 'default'}} className="window-header">
-                    <img onClick={() => goToPage('')} src={leftArrow} draggable="false"></img>
+                    <button onClick={() => goToPage('')} onTouchEnd={() => goToPage('')}>
+                        <img src={leftArrow}></img>
+                        <p>Back</p>
+                    </button>
                     <p>About</p>
                 </Row>
                 <Col className='title-content' lg={6} xs={8}>
